@@ -1,5 +1,27 @@
 {% extends "summary/base.html" %}
 {% load static %}
 {% block index %}
-<h1>hello</h1>
+<div class="row">
+    <div>
+        <img src="{%static 'images/logo.png' %}" alt="LOGO.png">
+    </div>
+    <div>
+        <h3>Online Text Summary</h3>
+        <P>No need to waste your time, we make your problems look easy.</P>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-6">
+        {% if original_text %}
+            <h3>Original Text/URL</h3>
+            {{ original_text }}
+        {% else %}
+            {% include "summary/includes/text_input_form.html" %}
+        {% endif %}
+    </div>
+
+
+</div>
 {% endblock %}

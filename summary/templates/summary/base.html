@@ -9,6 +9,8 @@
     {% load static %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+
+        
         body {
             background-color: #e2e6ea;
         }
@@ -71,6 +73,8 @@
             color: #fff;
             margin: 10px 0 0 0;
             padding: 0;
+            text-decoration: none;
+            align-content: center;
         }
 
         .footer-text {
@@ -79,6 +83,12 @@
             margin: 0;
             padding: 0;
         }
+
+        .footer a {
+            text-decoration: none;
+            color: white;
+        }
+
     </style>
 </head>
 
@@ -86,15 +96,16 @@
     <div class="row">
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon">asdadasdas</span>
+                <span class="navbar-toggler-icon"></span>
             </button>
-
-            <a class="navbar-brand mb-0 h1 navbar-text" href="/"><img class="nav-logo"
-                    src="{% static 'images/logo.png' %}" alt="ATS">Online Text Summary</a>
+            <img class="nav-logo"
+            src="{% static 'images/logo.png' %}" alt="OTS">
+            <a class="navbar-brand mb-0 h1 navbar-text" href="/">Online Text Summary</a>
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
 
+                <!-- ul -->
+                <ul class="navbar-nav">
                     <div class="nav-list">
                         <li class="nav-item home-page-list"><a class="nav-link navbar-text" href="#">Summarize PDF</a>
                         </li>
@@ -103,10 +114,7 @@
                     <div class="nav-list">
                         <li class="nav-item home-page-list"><a class="nav-link navbar-text" href="#">CNN</a></li>
                     </div>
-
                 </ul>
-
-
 
                 <ul class="navbar-nav ml-auto">
                     <a type="button" class="btn btn-primary" data-toggle="modal" href="#login-page">Sign In
@@ -123,6 +131,10 @@
         {% endblock %}
     </div>
 
+    <div class="footer">
+        <p>2020 Online Text Summarizer - <a href="https://github.com/BerishaHysen/textsummary" target="_blank">GITHUB</a></p>
+    </div>
+
     <script>
         function validateInputForm() {
             let url = document.forms["inputForm"]["url"].value;
@@ -134,6 +146,7 @@
             }
         }
     </script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
