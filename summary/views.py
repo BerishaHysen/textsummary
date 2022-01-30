@@ -34,30 +34,30 @@ def summary_page(request):
     context = {'data': summary, 'original_text': original_text}
     return render(request, "summary/index.html", context)
 
-# @login_required
-# def save_summary(request):
-#     summary = request.POST.get('summary')
-#     topic = request.POST.get('topic')
-#     if len(topic) < 50:
-#         heading = topic
-#     else:
-#         heading = topic[:50] + '...'
+@login_required
+def save_summary(request):
+    summary = request.POST.get('summary')
+    topic = request.POST.get('topic')
+    if len(topic) < 50:
+        heading = topic
+    else:
+        heading = topic[:50] + '...'
 
-#     summaryTb = Summary(user=request.user, body=summary, original_link=heading, date_created=date.today())
-#     summaryTb.save()
-#     context = {'message': 'success'}
-#     return render(request, "summary/index.html", context)
-
-
-# def history(request):
-#     summary = Summary.objects.filter(user=request.user).order_by('-id')
-#     context = {'data': summary}
-#     return render(request, "summary/history.html", context)
+    summaryTb = Summary(user=request.user, body=summary, original_link=heading, data_created=date.today())
+    summaryTb.save()
+    context = {'message': 'success'}
+    return render(request, "summary/index.html", context)
 
 
-# def history_topic(request):
-#     if request.method == 'GET':
-#         topic = request.GET.get('topic')
-#         summary = request.GET.get('body')
-#         context = {'topic': topic, 'body': summary}
-#         return render(request, "summary/history_topic.html", context)
+def history(request):
+    summary = Summary.objects.filter(user=request.user).order_by('-id')
+    context = {'data': summary}
+    return render(request, "summary/history.html", context)
+
+
+def history_topic(request):
+    if request.method == 'GET':
+        topic = request.GET.get('topic')
+        summary = request.GET.get('body')
+        context = {'topic': topic, 'body': summary}
+        return render(request, "summary/history_topic.html", context)
