@@ -7,6 +7,12 @@ name = "pypi"
 django = "*"
 mysqlclient = "*"
 django-bootstrap4 = "*"
+requests = "*"
+lxml = "*"
+nltk = "*"
+pymysql = "*"
+pypdf2 = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

@@ -1,0 +1,6 @@
+{% if data %}
+    <h3>Summary</h3>
+    <p>{{ data }}</p>
+{% else %}
+    {% include 'summary/includes/default_home.html' %}
+{% endif %}
