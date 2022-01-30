@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'summary',
     'bootstrap4',
-    'lajme',
-    'acc'
+    'lajme'
 ]
 
 MIDDLEWARE = [
