@@ -39,9 +39,6 @@
             background-color: #007bff;
         }
 
-        .navbar {
-            height: 45px;
-        }
 
         .nav-item {
             text-align: center;
@@ -91,7 +88,11 @@
 </head>
 
 <body>
+
+    
+
     <div class="row">
+        
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -140,6 +141,7 @@
         </nav>
     </div>
 
+    
     <!-- The Modal -->
 <div class="modal fade" id="login-page">
     <div class="modal-dialog modal-sm">
@@ -160,13 +162,13 @@
     </div>
 </div>
 
-    <div class="container" style="margin-top: 55px; margin-bottom: 48px;">
-        {% block index %}
+<div class="container" style="margin-top: 55px; margin-bottom: 48px;">
+    {% block index %}
 
-        {% endblock %}
-    </div>
+    {% endblock %}
+</div>
 
-    <div class="footer">
+    <div class="footer" align="center">
         <p>2020 Online Text Summarizer - <a href="https://github.com/BerishaHysen/textsummary" target="_blank">GITHUB</a></p>
     </div>
 

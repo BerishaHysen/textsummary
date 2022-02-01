@@ -2,10 +2,10 @@
 
 {% block index %}
 
-    <h2>Summary History of "<i>{{ user.username }}</i>"</h2>
+    <h3 style="padding-top: 50px; padding-bottom: 20px;">Summary History of "<i>{{ user.username }}</i>"</h3>
     {% for s in data %}
         <li>
-            <a href="history_topic?topic={{ s.original_link }}&body={{ s.body }}">{{ s.original_link }}</a>
+            <a href="history_topic?topic={{ s.original_link }}&body={{ s.body }}" style="font-size: 20px;">{{ s.original_link }}</a>
         </li>
         <hr>
     {% endfor %}

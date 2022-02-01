@@ -1,5 +1,21 @@
+<style>
+    h3 {
+        font-size: 50px;
+    }
+
+    h2 {
+        margin-top: 50px;
+    }
+
+    p {
+        border: 1px solid;
+        padding: 10px 20px;
+    }
+</style>
+
 {% if data %}
-    <h3>Summary</h3>
+
+    <h2>Summary</h3>
     <p>{{ data }}</p>
     <form method="post" action="{% url 'save_summary' %}">
         {% csrf_token %}
@@ -10,6 +26,7 @@
 {% else %}
     {% include 'summary/includes/default_home.html' %}
 {% endif %} 
+
 
 {% if message %}
     <script>
