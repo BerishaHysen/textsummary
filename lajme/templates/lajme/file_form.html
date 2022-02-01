@@ -4,21 +4,30 @@
 
 
     <style> 
-        .input-group-text{
-            color: brown;
+         label {
+            font-size: 30px;
         }
+
+        .col-sm-6 label{
+            color: rgb(122, 26, 26);
+        }
+
+        
     </style>
-    <div class="row" style="margin-top: 100px">
-        <div class="col-sm-6">
+    <div class="d-flex justify-content-center" style="margin-top: 100px">
+        
+        <div class="col">
+            <label>Metode e lehte dhe e shpejte per te bere permbledhjen e nje teksti te formatit PDF</label>
+            <img src="{% static 'images/logo.png' %}" style="width: 300px">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.errors }}
                 <div class="form-group">
-                    <label>Upload PDF</label>
+                    <label>Beje Upload File-in PDF:</label>
                     {{ form.document }}
                 </div>
 
-                <label>Summarize To: (5-50)% </label>
+                <label>Summarize (Zgjedh nje vlere ne mes 5-50 %) </label>
                 <div class="input-group mb-3">
                     {{ form.summary_p }}
                     <div class="input-group-apppend">
@@ -28,9 +37,6 @@
 
                 <button type="submit" class="btn btn-primary">DOWNLOAD SUMMARY</button>
             </form>
-        </div>
-        <div class="col-sm-6">
-            <img src="{% static 'images/pdf_txt.png' %}" style="width: 300px">
         </div>
     </div>
 
