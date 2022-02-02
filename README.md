@@ -1,6 +1,7 @@
 # textsummary
 
 Requirements:
+
 django-bootstrap4
 lxml
 mysqlclient
